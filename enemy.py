@@ -1,8 +1,9 @@
 import pygame
 
 
-class Enemy:
-    hp = 100
+class Enemy(pygame.sprite.Sprite):
+    
+    HP = 100
     damage = 10
     width = 50
     height = 50
@@ -11,8 +12,9 @@ class Enemy:
     image = ""
     surface = ""
     rect = ""
-
+ 
     def __init__(self, image, width=50,height=50, x=100,y=100, damage=10):
+        super().__init__()
         self.image = image
         self.width = width
         self.height = height
